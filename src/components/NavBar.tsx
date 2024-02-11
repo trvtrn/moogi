@@ -7,6 +7,7 @@ import {
   getKindeServerSession,
 } from "@kinde-oss/kinde-auth-nextjs/server";
 import UserAccountNav from "./UserAccountNav";
+import MobileNavBar from "./MobileNavBar";
 
 export default async function NavBar() {
   const { getUser } = getKindeServerSession();
@@ -19,7 +20,7 @@ export default async function NavBar() {
             <span>Moogi.</span>
           </Link>
 
-          {/* TODO: add mobile navbar */}
+          <MobileNavBar isAuth={!!user} />
 
           <div className="hidden items-center space-x-4 sm:flex">
             {!user ? (

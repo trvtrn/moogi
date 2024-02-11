@@ -17,7 +17,7 @@ const Page = () => {
 
   useEffect(() => {
     if (error?.data?.code === "UNAUTHORIZED") {
-      router.push("/");
+      router.push("/sign-in");
     } else {
       router.push("/dashboard");
     }

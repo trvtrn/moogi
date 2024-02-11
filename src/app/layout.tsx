@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import { cn, constructMetadata } from "@/lib/utils";
 import NavBar from "@/components/NavBar";
 import Providers from "@/components/Providers";
 
@@ -12,10 +11,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "moogi",
-  description: "moogi uses AI to let you chat with your PDF",
-};
+export const metadata = constructMetadata();
 
 export default function RootLayout({
   children,
